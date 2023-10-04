@@ -26,6 +26,8 @@ function loadUsers() {
 crudForm.addEventListener('submit', function (event){
     event.preventDefault()
 
+    const newUser
+
     fetch(apiUrl,{
         method: 'POST',
         body:JSON.stringify({//convierto info en formato JSON para enviarlo al servidor})4
