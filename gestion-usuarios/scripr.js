@@ -13,8 +13,11 @@ function loadUsers() {
         data.forEach(user => {
             const li = document.createElement('li')
             li.innerHTML = `
-                <strong> ${user.name} </strong>
+                <strong> ${user.name} </strong> (${user.email})
+                <button data-id="${user._id} class="btn btn-edit">Editar</button>
+                <button data-id="${user._id} class="btn btn-delete">Eliminar</button>
             `
+            userList.appendChild(li)
         });
     })
 }
