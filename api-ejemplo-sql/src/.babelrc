@@ -1,0 +1,3 @@
+{
+    "presets": ["@babl/present-env"]
+}

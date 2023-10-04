@@ -1,0 +1,33 @@
+{
+  "name": "api-ejemplo-sql",
+  "version": "1.0.0",
+  "description": "Ejem´plo de una api (ejemplo de backend práctico) desde 0 a una base de datos ya existente",
+  "main": "index.js",
+  "scripts": {
+    "production": "babel-node --present=@babel/preset-env",
+    "dev": "nodemon --exec npm run production src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "api",
+    "dataBase",
+    "REST",
+    "api",
+    "RESTfull"
+  ],
+  "author": "g27b-js-avanzado",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.0",
+    "@babel/node": "^7.22.19",
+    "Babel": "^0.0.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "promise-mysql": "^5.2.0"
+  }
+}
