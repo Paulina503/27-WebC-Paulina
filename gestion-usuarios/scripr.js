@@ -23,15 +23,30 @@ function loadUsers() {
 }
 
 //alta de usuarios
-crudForm.addEventListener('submit', function (event){
+crudForm.addEventListener('submit', function (event) {
     event.preventDefault()
 
-    const newUser
-
-    fetch(apiUrl,{
-        method: 'POST',
-        body:JSON.stringify({//convierto info en formato JSON para enviarlo al servidor})4
-            name: "Nombre",
-            correo:"Correo"
+    const newUser = {
+        name: nameInput.value,
+        email: emailInput.value
+    }
+    
+    
+    fetch(apiURL,{
+        method:'POST',
+        body:JSON.stringify(//Convierto mi información en formato JSON para enviarlo al servidor
+         newUser
+        ),
+        headers:{
+            'Content-Type' :'application/json'
+        }
+    }).then(() => {
+        nameInput.value = ''
+        emailInput.value = ''
+        loadUsers()
     })
+})
+
+document.addEventListener("DOMContentLoaded", function(){
+    loadUsers
 })
