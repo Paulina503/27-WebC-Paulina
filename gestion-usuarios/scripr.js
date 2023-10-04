@@ -21,3 +21,15 @@ function loadUsers() {
         });
     })
 }
+
+//alta de usuarios
+crudForm.addEventListener('submit', function (event){
+    event.preventDefault()
+
+    fetch(apiUrl,{
+        method: 'POST',
+        body:JSON.stringify({//convierto info en formato JSON para enviarlo al servidor})4
+            name: "Nombre",
+            correo:"Correo"
+    })
+})
